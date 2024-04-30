@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Users Management</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 60px; 
+      left: 0;
+      background-color: #343a40;
+      padding-top: 20px;
+      display: none; 
+    }
+
+    .sidebar a {
+      padding: 10px 15px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+    }
+
+    .sidebar a:hover {
+      background-color: #495057;
+    }
+
+    
+    .content {
+      margin-left: 250px;
+      padding: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .btn-blank {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          
+  </button>
+  
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-sm-2">
+      <li class="nav-item">
+        <button class="btn btn-light" onclick="toggleSidebar()"><span class="navbar-toggler-icon"></span></button>
+      </li>
+    </ul>
+    <a class="navbar-brand mr-auto" href="#">Admin Dashboard</a>
+    
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="sidebar" id="sidebar">
+  <a href="#">Dashboard</a>
+  <a href="#">Add User</a>
+  <a href="#">Update User</a>
+  <a href="#">Delete User</a>
+</div>
+
+<div class="content">
+  <h2>Users Management</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Email</th>
+        <th>Location</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="userList">
+      <tr>
+        <td>Rahul Sharma</td>
+        <td>rahul@example.com</td>
+        <td>Mumbai</td>
+        <td>
+          <a href="#" class="btn btn-primary btn-blank">Edit</a>
+          <a href="#" class="btn btn-danger btn-blank">Delete</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Priya Patel</td>
+        <td>priya@example.com</td>
+        <td>Delhi</td>
+        <td>
+          <a href="#" class="btn btn-primary btn-blank">Edit</a>
+          <a href="#" class="btn btn-danger btn-blank">Delete</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Rohit Verma</td>
+        <td>rohit@example.com</td>
+        <td>Bangalore</td>
+        <td>
+          <a href="#" class="btn btn-primary btn-blank">Edit</a>
+          <a href="#" class="btn btn-danger btn-blank">Delete</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Sneha Singh</td>
+        <td>sneha@example.com</td>
+        <td>Kolkata</td>
+        <td>
+          <a href="#" class="btn btn-primary btn-blank">Edit</a>
+          <a href="#" class="btn btn-danger btn-blank">Delete</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Vivek Gupta</td>
+        <td>vivek@example.com</td>
+        <td>Chennai</td>
+        <td>
+          <a href="#" class="btn btn-primary btn-blank">Edit</a>
+          <a href="#" class="btn btn-danger btn-blank">Delete</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Shreya Singhania</td>
+        <td>shreya@example.com</td>
+        <td>Hyderabad</td>
+        <td>
+          <a href="#" class="btn btn-primary btn-blank">Edit</a>
+          <a href="#" class="btn btn-danger btn-blank">Delete</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Alok Tiwari</td>
+        <td>alok@example.com</td>
+        <td>Pune</td>
+        <td>
+          <a href="#" class="btn btn-primary btn-blank">Edit</a>
+          <a href="#" class="btn btn-danger btn-blank">Delete</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Anjali Singh</td>
+        <td>anjali@example.com</td>
+        <td>Jaipur</td>
+        <td>
+          <a href="#" class="btn btn-primary btn-blank">Edit</a>
+          <a href="#" class="btn btn-danger btn-blank">Delete</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Prateek Kumar</td>
+        <td>prateek@example.com</td>
+        <td>Ahmedabad</td>
+        <td>
+          <a href="#" class="btn btn-primary btn-blank">Edit</a>
+          <a href="#" class="btn btn-danger btn-blank">Delete</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Divya Singh</td>
+        <td>divya@example.com</td>
+        <td>Chandigarh</td>
+        <td>
+          <a href="#" class="btn btn-primary btn-blank">Edit</a>
+          <a href="#" class="btn btn-danger btn-blank">Delete</a>
+        </td>
+      </tr>
+    </tbody>
+</table>
+</div>
+
+<script>
+function toggleSidebar() {
+  var sidebar = document.getElementById("sidebar");
+  if (sidebar.style.display === "none") {
+    sidebar.style.display = "block";
+  } else {
+    sidebar.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

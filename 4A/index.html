@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Mobile Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <style>
+    /* Custom styles for header responsiveness */
+    @media only screen and (max-width: 600px) {
+      /* Adjust header font size for smaller screens */
+      .ui-header h1 {
+        font-size: 16px !important;
+        white-space: normal !important; /* Allow text to wrap */
+      }
+    }
+
+    /* Additional media queries for other screen sizes */
+    @media only screen and (max-width: 800px) {
+      /* Adjust header font size for smaller screens */
+      .ui-header h1 {
+        font-size: 18px !important;
+        white-space: normal !important;
+      }
+    }
+
+    @media only screen and (max-width: 1200px) {
+      /* Adjust header font size for smaller screens */
+      .ui-header h1 {
+        font-size: 20px !important;
+        white-space: normal !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div data-role="page" id="homePage">
+    <div data-role="header" data-transition="slide">
+      <h1>Welcome to Simple Mobile Website developed using jQuery</h1>
+    </div>
+
+    <div data-role="content" style="text-align: center;">
+      <p>This is a simple mobile website built using jQuery Mobile.</p>
+      <p>Click Buttons Below to Navigate:</p>
+      <a href="#aboutPage" data-role="button" data-transition="slide">About</a>
+      <a href="#contactPage" data-role="button" data-transition="slide">Contact</a>
+    </div>
+
+    <div data-role="footer">
+      <h4>Simple Mobile Website made with jQuery</h4>
+    </div>
+  </div>
+
+  <div data-role="page" id="aboutPage">
+    <div data-role="header">
+      <a href="#homePage" class="ui-btn-left" data-icon="home" data-iconpos="notext">Home</a>
+      <h1>About</h1>
+    </div>
+
+    <div data-role="content" style="text-align: center;">
+      <p>This is the About page.</p>
+      <p>Assignment No. 4A: Create a simple Mobile Website using jQuery Mobile.</p>
+      <p>Name: Ashish Joshi</p>
+      <p>Roll No: TI28</p>
+      <p>Batch A</p>
+    </div>
+
+    <div data-role="footer">
+      <h4>Simple Mobile Website made with jQuery</h4>
+    </div>
+  </div>
+
+  <div data-role="page" id="contactPage">
+    <div data-role="header">
+      <a href="#homePage" class="ui-btn-left" data-icon="home" data-iconpos="notext">Home</a>
+      <h1>Contact Us</h1>
+    </div>
+
+    <div data-role="content" style="text-align: center;">
+      <p>Contact Page.</p>
+      <p>Contact Email: <a href="mailto:ashishjoshi2021.it@mmcoe.edu.in">ashishjoshi2021.it@mmcoe.edu.in</a></p>
+    </div>
+
+    <div data-role="footer">
+      <h4>Simple Mobile Website made with jQuery</h4>
+    </div>
+  </div>
+
+</body>
+</html>
