@@ -26,9 +26,11 @@ export class LoginComponent implements OnInit {
       const randomNumber = Math.random();
       if (randomNumber < 0.5) {
         // Set login success flag
-        console.log('Successful Login');
-        alert('Successful login');
-            } else {
+        this.loginSuccess = true;
+
+        // Navigate to login success component upon successful login
+        this.router.navigate(['/login-success']); // Change '/login-success' to your actual route
+      } else {
         console.log('Invalid login');
         alert('Invalid login');
       }
